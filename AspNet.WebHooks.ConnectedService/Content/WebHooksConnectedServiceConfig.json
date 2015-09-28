@@ -1,0 +1,59 @@
+﻿{
+  "availableReceivers": [
+    {
+      "name": "GitHub",
+      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.GitHub",
+      "nugetVersion": "1.2.0-beta3"
+    },
+    {
+      "name": "Dropbox",
+      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.Dropbox",
+      "nugetVersion": "1.2.0-beta3"
+    },
+    {
+      "name": "Instagram",
+      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.Instagram",
+      "nugetVersion": "1.2.0-beta3"
+    },
+    {
+      "name": "MailChimp",
+      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.MailChimp",
+      "nugetVersion": "1.2.0-beta3"
+    },
+    {
+      "name": "Paypal",
+      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.Paypal",
+      "nugetVersion": "1.2.0-beta3"
+    },
+    {
+      "name": "Pusher",
+      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.Pusher",
+      "nugetVersion": "1.2.0-beta3"
+    },
+    {
+      "name": "Salesforce",
+      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.Salesforce",
+      "nugetVersion": "1.2.0-beta3"
+    },
+    {
+      "name": "Slack",
+      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.Slack",
+      "nugetVersion": "1.2.0-beta3"
+    },
+    {
+      "name": "Stripe",
+      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.Stripe",
+      "nugetVersion": "1.2.0-beta3"
+    },
+    {
+      "name": "Trello",
+      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.Trello",
+      "nugetVersion": "1.2.0-beta3"
+    },
+    {
+      "name": "WordPress",
+      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.WordPress",
+      "nugetVersion": "1.2.0-beta3"
+    }
+  ]
+}

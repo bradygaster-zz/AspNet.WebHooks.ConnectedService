@@ -1,0 +1,24 @@
+﻿<#@ template debug="true" hostSpecific="true" #>
+<#@ output extension=".cs" #>
+<#@ Assembly Name="System.Core" #>
+<#@ parameter name="ns" type="System.String" #>
+<#@ parameter name="providers" type="System.String[]" #>
+using System.Web.Http;
+
+namespace <#= ns #>
+{
+    public static class WebHookConfig
+    {
+        public static void Register(HttpConfiguration config)
+        {
+<#
+foreach (var receiver in providers)
+{
+#>
+			config.InitializeReceive<#= receiver #>WebHooks();
+<#
+}
+#>
+        }
+    }
+}
