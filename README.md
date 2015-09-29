@@ -8,7 +8,7 @@ This repository contains the source code for the ASP.NET WebHooks Visual Studio 
 
 Here's a 7-minute video demonstration of the extension in use. In the demo, I create a simple ASP.NET Web Application that answers incoming GitHub and Dropbox WebHook requests.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/gbr-wZVl6d4" frameborder="0" allowfullscreen></iframe>
+[![WebHooks Demo Video](media/video-screenshot.png)](https://www.youtube.com/watch?v=gbr-wZVl6d4)
 
 
 ### What does it do?
