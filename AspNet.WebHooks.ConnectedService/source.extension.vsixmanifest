@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="AspNet.WebHooks.ConnectedService.brady gaster.1b00ee20-709b-4495-9401-f6e141fbb7ed" Version="1.2.0" Language="en-US" Publisher="brady gaster" />
+    <Identity Id="AspNet.WebHooks.ConnectedService.brady gaster.1b00ee20-709b-4495-9401-f6e141fbb7ed" Version="1.2.9" Language="en-US" Publisher="brady gaster" />
     <DisplayName>ASP.NET WebHooks Connected Service</DisplayName>
     <Description xml:space="preserve">A Connected Service that Scaffolds ASP.NET WebHook support into an existing ASP.NET project. </Description>
     <MoreInfo>http://aka.ms/webhooks-tools-announce</MoreInfo>

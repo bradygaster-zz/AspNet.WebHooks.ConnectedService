@@ -6,3 +6,4 @@
 1.2.0		Simplified JSON configuration file listing receivers.
 			Added global settings to JSON configuration file.
 			Added overrides for NuGet version and config wireup methods for receiver options.
+1.2.9		Changing build number to match actual build (had gotten out of sync)
