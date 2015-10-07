@@ -1,69 +1,63 @@
 ﻿{
+  "defaultNugetVersion": "1.2.0-beta3a",
   "availableReceivers": [
     {
-      "name": "Azure",
+      "name": "Azure Kudu",
       "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.Azure",
-      "nugetVersion": "1.2.0-beta3a"
+      "configWireupOverride" : "Kudu"
+    },
+    {
+      "name": "Azure Alerts",
+      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.Azure",
+      "configWireupOverride" : "AzureAlert"
     },
     {
       "name": "Bitbucket",
-      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.Bitbucket",
-      "nugetVersion": "1.2.0-beta3a"
+      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.Bitbucket"
     },
     {
       "name": "GitHub",
-      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.GitHub",
-      "nugetVersion": "1.2.0-beta3a"
+      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.GitHub"
     },
     {
       "name": "Dropbox",
-      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.Dropbox",
-      "nugetVersion": "1.2.0-beta3a"
+      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.Dropbox"
     },
     {
       "name": "Instagram",
-      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.Instagram",
-      "nugetVersion": "1.2.0-beta3a"
+      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.Instagram"
     },
     {
       "name": "MailChimp",
-      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.MailChimp",
-      "nugetVersion": "1.2.0-beta3a"
+      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.MailChimp"
     },
     {
       "name": "Paypal",
-      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.Paypal",
-      "nugetVersion": "1.2.0-beta3a"
+      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.Paypal"
     },
     {
       "name": "Pusher",
-      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.Pusher",
-      "nugetVersion": "1.2.0-beta3a"
+      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.Pusher"
     },
     {
       "name": "Salesforce",
-      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.Salesforce",
-      "nugetVersion": "1.2.0-beta3a"
+      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.Salesforce"
     },
     {
       "name": "Slack",
-      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.Slack",
-      "nugetVersion": "1.2.0-beta3a"
+      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.Slack"
     },
     {
       "name": "Stripe",
-      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.Stripe",
-      "nugetVersion": "1.2.0-beta3a"
+      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.Stripe"
     },
     {
       "name": "Trello",
-      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.Trello",
-      "nugetVersion": "1.2.0-beta3a"
+      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.Trello"
     },
     {
       "name": "WordPress",
-      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.WordPress",
-      "nugetVersion": "1.2.0-beta3a"
+      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.WordPress"
     }
   ]
 }

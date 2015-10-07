@@ -110,17 +110,14 @@ namespace AspNet.WebHooks.ConnectedService.ViewModels
             StreamReader rdr = //new StreamReader(@"Content\WebHooksConnectedServiceConfig.json");
                 new StreamReader(templateStream);
 
-            JsonSerializer serializer = new JsonSerializer();
-            JObject json = serializer.Deserialize<JObject>(new JsonTextReader(rdr));
+            ExtensionConfiguration json = new JsonSerializer().Deserialize<ExtensionConfiguration>(new JsonTextReader(rdr));
 
-            // get the receivers
-            JArray receivers = json["availableReceivers"].Value<JArray>();
-
-            foreach (var receiver in receivers.Children())
+            foreach (var item in json.AvailableReceivers)
             {
-                WebHookReceiverOptions.Add(
-                    serializer.Deserialize<WebHookReceiverOption>(new JTokenReader(receiver))
-                    );
+                if (string.IsNullOrEmpty(item.NuGetVersionOverride))
+                    item.NuGetVersionOverride = json.DefaultNugetVersion;
+
+                WebHookReceiverOptions.Add(item);
             }
 
             var tmp = WebHookReceiverOptions.OrderBy(x => x.Name).ToList();

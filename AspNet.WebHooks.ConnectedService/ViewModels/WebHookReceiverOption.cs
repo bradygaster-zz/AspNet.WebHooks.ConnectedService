@@ -6,7 +6,8 @@ namespace AspNet.WebHooks.ConnectedService.ViewModels
     {
         public string Name { get; set; }
         public string NuGetPackage { get; set; }
-        public string NuGetVersion { get; set; }
+        public string NuGetVersionOverride { get; set; }
+        public string ConfigWireupOverride { get; set; }
 
         private bool _isChecked;
         public bool IsChecked

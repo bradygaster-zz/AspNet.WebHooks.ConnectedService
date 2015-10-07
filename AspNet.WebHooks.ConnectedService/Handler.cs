@@ -39,8 +39,8 @@ namespace AspNet.WebHooks.ConnectedService
                 Resources.LogMessageGettingCoreNuGets);
 
             InstallPackage("Microsoft.AspNet.WebApi.WebHost", "5.2.3");
-            InstallPackage("Microsoft.AspNet.WebHooks.Common", "1.2.0-beta3");
-            InstallPackage("Microsoft.AspNet.WebHooks.Receivers", "1.2.0-beta3");
+            InstallPackage("Microsoft.AspNet.WebHooks.Common", "1.2.0-beta3a");
+            InstallPackage("Microsoft.AspNet.WebHooks.Receivers", "1.2.0-beta3a");
 
             // remember the list of providers selected
             List<string> providers = new List<string>();
@@ -57,22 +57,26 @@ namespace AspNet.WebHooks.ConnectedService
                     await context.Logger.WriteMessageAsync(LoggerMessageCategory.Information,
                         string.Format(Resources.LogMessageGettingReceiver, item.Option.Name));
 
-                    InstallPackage(item.Option.NuGetPackage, item.Option.NuGetVersion);
+                    InstallPackage(item.Option.NuGetPackage, item.Option.NuGetVersionOverride);
+
+                    var receiverName = ((string.IsNullOrEmpty(item.Option.ConfigWireupOverride))
+                                    ? item.Option.Name
+                                    : item.Option.ConfigWireupOverride);
 
                     // add the handler code to the project
                     await GeneratedCodeHelper
                         .GenerateCodeFromTemplateAndAddToProject(
                             context,
                             "WebHookHandler",
-                            string.Format($@"WebHookHandlers\{item.Option.Name}WebHookHandler.cs"),
+                            string.Format($@"WebHookHandlers\{receiverName}WebHookHandler.cs"),
                             new Dictionary<string, object>
                             {
                                 {"ns", projectNamespace},
-                                {"receiverName", item.Option.Name}
+                                {"receiverName", receiverName }
                             });
 
                     // remember this provider
-                    providers.Add(item.Option.Name);
+                    providers.Add(receiverName);
 
                     // record the telemetry for the receiver
                     TelemetryWrapper.RecordEvent("Receiver Selected",
