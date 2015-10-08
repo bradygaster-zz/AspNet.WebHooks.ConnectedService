@@ -33,7 +33,9 @@ namespace AspNet.WebHooks.ConnectedService
         {
             ConnectedServiceInstance instance = new ConnectedServiceInstance();
             ConnectedServiceConfigurator configurator = new AddWebHookWizard(context, instance);
+
             TelemetryWrapper.Refresh();
+            TelemetryWrapper.RecordEvent("WebHook Experience Started");
 
             return Task.FromResult(configurator);
         }

@@ -79,11 +79,7 @@ namespace AspNet.WebHooks.ConnectedService
                     providers.Add(receiverName);
 
                     // record the telemetry for the receiver
-                    TelemetryWrapper.RecordEvent("Receiver Selected",
-                        properties: new Dictionary<string, string>()
-                        {
-                            {"Name", item.Option.Name}
-                        });
+                    TelemetryWrapper.RecordEvent($"{item.Option.Name}");
                 }
 
                 // add the code to the project to configure all of the providers
