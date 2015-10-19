@@ -151,7 +151,7 @@ namespace AspNet.WebHooks.ConnectedService {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://blogs.msdn.com/b/webdev/archive/2015/09/04/introducing-microsoft-asp-net-webhooks-preview.aspx.
+        ///   Looks up a localized string similar to http://go.microsoft.com/fwlink/?LinkId=690277.
         /// </summary>
         internal static string MoreInfoUrl {
             get {

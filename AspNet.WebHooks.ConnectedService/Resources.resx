@@ -148,7 +148,7 @@
     <value>Retrieving WebHook Receiver NuGet for {0}</value>
   </data>
   <data name="MoreInfoUrl" xml:space="preserve">
-    <value>http://blogs.msdn.com/b/webdev/archive/2015/09/04/introducing-microsoft-asp-net-webhooks-preview.aspx</value>
+    <value>http://go.microsoft.com/fwlink/?LinkId=690277</value>
   </data>
   <data name="SelectWebHooksPageDescription" xml:space="preserve">
     <value>Select the third-party WebHooks you want to receive</value>
