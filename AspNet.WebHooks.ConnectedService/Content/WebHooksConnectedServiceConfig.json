@@ -41,7 +41,10 @@
     },
     {
       "name": "Salesforce",
-      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.Salesforce"
+      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.Salesforce",
+      "receiverNameOverride": "SfSoap",
+      "incomingTypeOverride": "SalesforceNotifications",
+      "receiverSecretConfigSettingNameOverride": "SalesforceSoap"
     },
     {
       "name": "Slack",

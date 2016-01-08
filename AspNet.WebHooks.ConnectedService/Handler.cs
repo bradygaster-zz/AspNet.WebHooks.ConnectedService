@@ -59,24 +59,34 @@ namespace AspNet.WebHooks.ConnectedService
 
                     InstallPackage(item.Option.NuGetPackage, item.Option.NuGetVersionOverride);
 
-                    var receiverName = ((string.IsNullOrEmpty(item.Option.ConfigWireupOverride))
+                    var classNamePrefix = ((string.IsNullOrEmpty(item.Option.ConfigWireupOverride))
                                     ? item.Option.Name
                                     : item.Option.ConfigWireupOverride);
+
+                    var receiverName = ((string.IsNullOrEmpty(item.Option.ReceiverNameOverride))
+                                    ? classNamePrefix
+                                    : item.Option.ReceiverNameOverride);
+
+                    var incomingType = ((string.IsNullOrEmpty(item.Option.IncomingTypeOverride))
+                                    ? "JObject"
+                                    : item.Option.IncomingTypeOverride);
 
                     // add the handler code to the project
                     await GeneratedCodeHelper
                         .GenerateCodeFromTemplateAndAddToProject(
                             context,
                             "WebHookHandler",
-                            string.Format($@"WebHookHandlers\{receiverName}WebHookHandler.cs"),
+                            string.Format($@"WebHookHandlers\{classNamePrefix}WebHookHandler.cs"),
                             new Dictionary<string, object>
                             {
                                 {"ns", projectNamespace},
-                                {"receiverName", receiverName }
+                                {"classNamePrefix", classNamePrefix },
+                                {"receiverName", receiverName },
+                                {"incomingType", incomingType }
                             });
 
                     // remember this provider
-                    providers.Add(receiverName);
+                    providers.Add(classNamePrefix);
 
                     // record the telemetry for the receiver
                     TelemetryWrapper.RecordEvent($"{item.Option.Name}");

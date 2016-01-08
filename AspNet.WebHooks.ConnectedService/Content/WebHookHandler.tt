@@ -1,7 +1,9 @@
 ﻿<#@ template debug="true" hostSpecific="true" #>
 <#@ output extension=".cs" #>
 <#@ parameter name="ns" type="System.String" #>
+<#@ parameter name="classNamePrefix" type="System.String" #>
 <#@ parameter name="receiverName" type="System.String" #>
+<#@ parameter name="incomingType" type="System.String" #>
 using Microsoft.AspNet.WebHooks;
 using Newtonsoft.Json.Linq;
 using System.Linq;
@@ -9,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace <#= ns #>.WebHookHandlers
 {
-    public class <#= receiverName #>WebHookHandler : WebHookHandler
+    public class <#= classNamePrefix #>WebHookHandler : WebHookHandler
     {
         public override Task ExecuteAsync(string receiver, WebHookHandlerContext context)
         {
@@ -18,7 +20,7 @@ namespace <#= ns #>.WebHookHandlers
 			{
 				// todo: replace this placeholder functionality with your own code
 				string action = context.Actions.First();
-				JObject incoming = context.GetDataOrDefault<JObject>();
+				<#= incomingType #> incoming = context.GetDataOrDefault<<#= incomingType #>>();
 			}
             
             return Task.FromResult(true);

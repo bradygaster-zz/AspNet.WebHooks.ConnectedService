@@ -32,9 +32,9 @@ namespace AspNet.WebHooks.ConnectedService.ViewModels
         {
             get
             {
-                var receiverName = ((string.IsNullOrEmpty(Option.ConfigWireupOverride))
-                                    ? Option.Name
-                                    : Option.ConfigWireupOverride);
+                var receiverName = string.IsNullOrEmpty(Option.ReceiverSecretConfigSettingNameOverride)
+                    ? (string.IsNullOrEmpty(Option.ConfigWireupOverride) ? Option.Name : Option.ConfigWireupOverride)
+                    : Option.ReceiverSecretConfigSettingNameOverride;
 
                 return string.Concat(Constants.ReceiverSecretConfigPrefix, receiverName);
             }
