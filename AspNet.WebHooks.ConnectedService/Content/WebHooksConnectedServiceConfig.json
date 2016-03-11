@@ -1,5 +1,5 @@
 ﻿{
-  "defaultNugetVersion": "1.2.0-beta6a",
+  "defaultNugetVersion": "1.2.0-rc1",
   "availableReceivers": [
     {
       "name": "Azure Kudu",
