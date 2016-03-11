@@ -28,10 +28,6 @@
       "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.DynamicsCRM"
     },
     {
-      "name": "Instagram",
-      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.Instagram"
-    },
-    {
       "name": "MailChimp",
       "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.MailChimp"
     },
