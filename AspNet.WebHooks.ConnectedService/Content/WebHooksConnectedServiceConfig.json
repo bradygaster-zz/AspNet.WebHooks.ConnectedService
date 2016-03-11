@@ -4,12 +4,12 @@
     {
       "name": "Azure Kudu",
       "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.Azure",
-      "configWireupOverride" : "Kudu"
+      "configWireupOverride": "Kudu"
     },
     {
       "name": "Azure Alerts",
       "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.Azure",
-      "configWireupOverride" : "AzureAlert"
+      "configWireupOverride": "AzureAlert"
     },
     {
       "name": "Bitbucket",
@@ -22,6 +22,10 @@
     {
       "name": "Dropbox",
       "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.Dropbox"
+    },
+    {
+      "name": "Dynamics CRM",
+      "nugetPackage": "Microsoft.AspNet.WebHooks.Receivers.DynamicsCRM"
     },
     {
       "name": "Instagram",
